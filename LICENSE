@@ -1,0 +1,91 @@
+HMJE 도구 소스 공개 라이선스 — Beta 1
+라이선스 버전 1.0 · 2026-10-09
+Copyright (c) 2026 오현우. All rights reserved.
+
+한국어 (주 문서)
+
+1. 적용 범위
+이 라이선스는 HMJE 컴파일러, 프런트엔드, 타입 검사기, HMIR·LLVM 생성기,
+빌드·설치 도구, Swift 씨앗·재현 검증 코드 및 그 문서·예제에 적용됩니다.
+훈민정음 IDE 바이너리에도
+같은 조건을 적용합니다. IDE 본체 소스는 이 저장소에 공개하지 않습니다.
+앱에 포함되는 런타임·표준·플랫폼 라이브러리는 LICENSE-RUNTIME이 우선하며,
+제삼자 자료는 THIRD_PARTY_NOTICES.md와 각각의 원래 라이선스를 따릅니다.
+개별 파일이나 별도 예제 저장소에 명시한 다른 라이선스가 있으면 그 라이선스가
+우선합니다. 소스 아카이브에는 압축 해제 후 각 구성요소의 적용 범위를 따릅니다.
+
+2. 무료 사용 허용
+아래 조건을 지키면 개인·법인 모두 도구의 소스와 바이너리를 내려받고,
+검토하고, 복제하고, 수정하고, 직접 빌드하고, 제3조의 제한 범위 안에서
+무료로 사용할
+수 있습니다. 상용 앱의 개발·빌드·테스트와 조직 내부 사용도 포함합니다.
+도구로 만든 앱을 판매하거나 서비스를 제공하는 행위 자체는 제한하지
+않습니다. 앱에 포함한 HMJE 라이브러리는 LICENSE-RUNTIME을 따라야 합니다.
+
+3. 도구의 재판매·재배포와 경쟁 제공 금지
+저작권자 오현우(배포: Semtle Inc.)의 별도 서면 허가 없이 도구 또는 그 수정본·파생 도구를 판매,
+재라이선스하거나 다른 사람에게 재배포할 수 없습니다. 유료·무료 여부와
+관계없이 도구 또는 도구·수정본·파생 도구의 주요 기능을 HMJE 도구와
+경쟁하는 제품이나 서비스로
+제공할 수 없습니다. 예를 들어 HMJE 컴파일러·IDE의 대체 배포판, 호스팅된
+컴파일러·IDE, 도구의 주요 기능을 대신 제공하는 개발 서비스를 포함합니다.
+자신의 앱을 개발하기 위해 도구를 내부 빌드 시스템에서 실행하는 것은
+경쟁 제공에 해당하지 않습니다.
+
+4. 권리와 조건
+허용된 복제본에는 저작권 표시와 이 라이선스를 보존해야 합니다. 명시적으로
+허용한 권리 외에는 어떠한 권리도 부여하지 않습니다. 조건 위반 시 이
+라이선스의 허가는 종료됩니다. 추가 배포·서비스 권한은 저작권자와
+별도로 합의해야 합니다. 이 문서는 소스 열람이 가능한 제한 라이선스이며,
+OSI 오픈 소스 라이선스가 아닙니다. 이 문서는 HMJE의 별도 라이선스이며,
+PolyForm 등 다른 라이선스를 채택한 것이 아닙니다.
+
+5. 상표
+“HMJE”와 “훈민정음 IDE”는 저작권자 오현우의 이름·상표입니다. 이 라이선스는
+상표 사용 권리나 공식 배포판으로 표시할 권리를 부여하지 않습니다.
+정확한 출처 표시와 LICENSE-RUNTIME의 기여 표시는 할 수 있습니다.
+
+6. 보증과 책임
+법률이 허용하는 범위에서 도구는 어떠한 명시적·묵시적 보증도 없이 현 상태로
+제공됩니다. 저작권자, 배포자 Semtle Inc., 기여자는 사용으로 발생하는 손해에 책임을 지지
+않습니다. 이 라이선스는 적용 법률에 따라 배제하거나 제한할 수 없는 권리와
+책임을 배제하거나 제한하지 않습니다. 두 언어 사이에 해석 차이가 있으면
+한국어 문서를 우선합니다.
+
+English (reference translation)
+
+This source-available license covers the HMJE compiler/toolchain, build and
+installation tools, Swift seed and reproduction-verification code, documentation
+and examples, and separately distributed Hunminjeongeum IDE binaries. IDE application source is not published here.
+LICENSE-RUNTIME takes precedence for runtime, standard and platform library code
+embedded in applications. Third-party materials retain their own licenses.
+A different license expressly stated for an individual file or separate example
+repository takes precedence. Archived sources retain the component-specific
+license scope after extraction.
+
+Individuals and organizations may download, inspect, copy, modify, build and use
+these tools free of charge within the restrictions of Section 3, including
+developing commercial applications and internal build systems. Selling applications made with HMJE is
+allowed, subject to LICENSE-RUNTIME for embedded HMJE code.
+
+Without separate written permission from the Licensor, 오현우 (distributed by Semtle Inc.), you may not sell,
+sublicense or redistribute the tools or modified/derived versions, or offer the
+tools or the principal functionality of the tools or their modified/derived
+versions as a competing product or service, whether paid or free. This includes substitute compiler/IDE distributions and hosted
+compiler/IDE or development services that replace the principal tool functions.
+Internal use to build your own applications is permitted.
+
+Keep copyright notices and this license in permitted copies. No unexpressed
+rights are granted; permission terminates upon breach. Additional distribution
+or service rights require a separate agreement. This is not an OSI open-source
+license. This is a separate HMJE license, not an adoption of PolyForm or any
+other license.
+
+“HMJE” and “훈민정음 IDE” are names/trademarks of the Licensor, 오현우. No trademark rights or
+right to claim an official distribution are granted. Accurate attribution and
+the acknowledgement required by LICENSE-RUNTIME are permitted.
+
+To the extent permitted by law, the tools are provided AS IS without warranties,
+and the Licensor, the Distributor (Semtle Inc.), and contributors disclaim liability for damages. This license
+does not exclude or limit rights or liabilities that cannot be excluded or
+limited under applicable law. The Korean text controls if the translations differ.

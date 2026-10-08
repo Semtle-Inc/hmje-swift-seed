@@ -1,0 +1,366 @@
+{
+  "build" : "2026100804",
+  "checkedAt" : "2026-10-08T18:44:39Z",
+  "comparison" : "raw pre-distribution build bytes and signature-normalized signed release copies",
+  "compilerSourceCommit" : "032483bd83c275837d0a277db125f651bf34b678",
+  "distributionSignatureReproduced" : false,
+  "hostTools" : {
+    "clang" : "Apple clang version 21.0.0 (clang-2100.3.20.102)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: \/Applications\/Xcode-beta.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin",
+    "os" : "27.0",
+    "sdk" : "27.0",
+    "swift" : "swift-driver version: 1.167 Apple Swift version 6.4 (swiftlang-6.4.0.20.104 clang-2100.3.20.102)\nTarget: arm64-apple-macosx27.0.0",
+    "xcode" : "\/Applications\/Xcode-beta.app\/Contents\/Developer"
+  },
+  "message" : "",
+  "packageToolchainCommit" : "d2ce1c947dcc32ea40fd242a530e36bbf22a1790",
+  "schema" : "hmje-beta1-seed-verification-v1",
+  "scope" : "macos-arm64 compiler tools; IDE and other architectures excluded",
+  "sourcePrefixMapping" : "HMIR source-location records and optional-unwrapping diagnostic filename prefixes only",
+  "stages" : [
+    {
+      "exitCode" : 0,
+      "log" : "seed-integrity.log",
+      "seconds" : 0.069451093673706055,
+      "stage" : "seed-integrity",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "source-integrity.log",
+      "seconds" : 0.13314294815063477,
+      "stage" : "source-integrity",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "release-integrity.log",
+      "seconds" : 0.13356101512908936,
+      "stage" : "release-integrity",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "extract-alias-bridge.log",
+      "seconds" : 0.13732600212097168,
+      "stage" : "extract-alias-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "bootstrap-alias-backport.log",
+      "seconds" : 0.53642606735229492,
+      "stage" : "bootstrap-alias-backport",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-manifest-alias-bridge.log",
+      "seconds" : 0.1354219913482666,
+      "stage" : "tree-manifest-alias-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "extract-anchor.log",
+      "seconds" : 0.13464510440826416,
+      "stage" : "extract-anchor",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-manifest-anchor.log",
+      "seconds" : 0.13542509078979492,
+      "stage" : "tree-manifest-anchor",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "extract-beta1.log",
+      "seconds" : 0.13418102264404297,
+      "stage" : "extract-beta1",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-manifest-beta1.log",
+      "seconds" : 0.20350003242492676,
+      "stage" : "tree-manifest-beta1",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "extract-container-bridge.log",
+      "seconds" : 0.13389003276824951,
+      "stage" : "extract-container-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-manifest-container-bridge.log",
+      "seconds" : 0.13498306274414062,
+      "stage" : "tree-manifest-container-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "extract-field-bridge.log",
+      "seconds" : 0.20266306400299072,
+      "stage" : "extract-field-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-manifest-field-bridge.log",
+      "seconds" : 0.134194016456604,
+      "stage" : "tree-manifest-field-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "extract-none-bridge.log",
+      "seconds" : 0.23953402042388916,
+      "stage" : "extract-none-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "bootstrap-none-backport.log",
+      "seconds" : 0.069697976112365723,
+      "stage" : "bootstrap-none-backport",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-manifest-none-bridge.log",
+      "seconds" : 0.20425605773925781,
+      "stage" : "tree-manifest-none-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "extract-payload-bridge.log",
+      "seconds" : 0.13564908504486084,
+      "stage" : "extract-payload-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-manifest-payload-bridge.log",
+      "seconds" : 0.13317596912384033,
+      "stage" : "tree-manifest-payload-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "seed-gen1.log",
+      "seconds" : 221.14833700656891,
+      "stage" : "seed-gen1",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "backend-upgrade.log",
+      "seconds" : 83.874604940414429,
+      "stage" : "backend-upgrade",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "field-bridge.log",
+      "seconds" : 344.58042705059052,
+      "stage" : "field-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "alias-upgrade.log",
+      "seconds" : 298.96999502182007,
+      "stage" : "alias-upgrade",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "payload-bridge.log",
+      "seconds" : 337.10981702804565,
+      "stage" : "payload-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "container-bridge.log",
+      "seconds" : 409.31529700756073,
+      "stage" : "container-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "none-upgrade.log",
+      "seconds" : 284.14646804332733,
+      "stage" : "none-upgrade",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "beta1-gen1.log",
+      "seconds" : 184.67457699775696,
+      "stage" : "beta1-gen1",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "beta1-gen2.log",
+      "seconds" : 189.81716501712799,
+      "stage" : "beta1-gen2",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "beta1-gen3.log",
+      "seconds" : 197.63849699497223,
+      "stage" : "beta1-gen3",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "fixedpoint-컴파일러.log",
+      "seconds" : 0.13795101642608643,
+      "stage" : "fixedpoint-컴파일러",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "fixedpoint-hmir을llvm으로.log",
+      "seconds" : 0.067121028900146484,
+      "stage" : "fixedpoint-hmir을llvm으로",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "fixedpoint-제품조정기.log",
+      "seconds" : 0.067986011505126953,
+      "stage" : "fixedpoint-제품조정기",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "fixedpoint-프로젝트조정기.log",
+      "seconds" : 0.068065047264099121,
+      "stage" : "fixedpoint-프로젝트조정기",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "release-normalization.log",
+      "seconds" : 1.0006259679794312,
+      "stage" : "release-normalization",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "normalized-release-integrity.log",
+      "seconds" : 0.1340099573135376,
+      "stage" : "normalized-release-integrity",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "raw-build-integrity.log",
+      "seconds" : 0.13414096832275391,
+      "stage" : "raw-build-integrity",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "release-match-컴파일러.log",
+      "seconds" : 0.067487955093383789,
+      "stage" : "release-match-컴파일러",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "release-match-hmir을llvm으로.log",
+      "seconds" : 0.067713022232055664,
+      "stage" : "release-match-hmir을llvm으로",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "release-match-제품조정기.log",
+      "seconds" : 0.066164016723632812,
+      "stage" : "release-match-제품조정기",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "release-match-프로젝트조정기.log",
+      "seconds" : 0.068284034729003906,
+      "stage" : "release-match-프로젝트조정기",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-integrity-after-alias-bridge.log",
+      "seconds" : 0.27364993095397949,
+      "stage" : "tree-integrity-after-alias-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-integrity-after-anchor.log",
+      "seconds" : 0.19996702671051025,
+      "stage" : "tree-integrity-after-anchor",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-integrity-after-beta1.log",
+      "seconds" : 0.20199596881866455,
+      "stage" : "tree-integrity-after-beta1",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-integrity-after-container-bridge.log",
+      "seconds" : 0.26676094532012939,
+      "stage" : "tree-integrity-after-container-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-integrity-after-field-bridge.log",
+      "seconds" : 0.20035600662231445,
+      "stage" : "tree-integrity-after-field-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-integrity-after-none-bridge.log",
+      "seconds" : 0.26805901527404785,
+      "stage" : "tree-integrity-after-none-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "tree-integrity-after-payload-bridge.log",
+      "seconds" : 0.26796901226043701,
+      "stage" : "tree-integrity-after-payload-bridge",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "source-integrity-after.log",
+      "seconds" : 0.13419508934020996,
+      "stage" : "source-integrity-after",
+      "status" : "passed"
+    },
+    {
+      "exitCode" : 0,
+      "log" : "seed-integrity-after.log",
+      "seconds" : 0.067120909690856934,
+      "stage" : "seed-integrity-after",
+      "status" : "passed"
+    }
+  ],
+  "status" : "verified",
+  "version" : "1.0.0-beta.1"
+}

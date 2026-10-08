@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0-beta.1",
+  "build": "2026100804",
+  "compilerSourceCommit": "032483bd83c275837d0a277db125f651bf34b678",
+  "packageToolchainCommit": "d2ce1c947dcc32ea40fd242a530e36bbf22a1790",
+  "seedSourceCommit": "09528474d6d6b39298b2d07e0ef199aef0ce6951",
+  "host": "macos-arm64",
+  "deploymentTarget": "14.0",
+  "snapshots": {
+    "anchor": "1584eded86e118cf22159f763fcc2341f3a3e0f6",
+    "field-bridge": "e7467cf9d0aac6fbdf8c3d4a2e3448dd82f0d637",
+    "alias-bridge": "3e4dbb038c569479e35b3fe163177d255a871a8b",
+    "payload-bridge": "6cc6773135c925110e622bec7ef4c7d9f1d9482c",
+    "container-bridge": "add6b9416226457f7961651f4a4d44e174df86f9",
+    "none-bridge": "add6b9416226457f7961651f4a4d44e174df86f9",
+    "beta1": "d2ce1c947dcc32ea40fd242a530e36bbf22a1790"
+  },
+  "bootstrapStages": [
+    {"id": "backend-upgrade", "source": "field-bridge", "artifact": "hmir을llvm으로"},
+    {"id": "field-bridge", "source": "field-bridge"},
+    {"id": "alias-upgrade", "source": "alias-bridge"},
+    {"id": "payload-bridge", "source": "payload-bridge"},
+    {"id": "container-bridge", "source": "container-bridge"},
+    {"id": "none-upgrade", "source": "none-bridge", "artifact": "컴파일러"},
+    {"id": "beta1-gen1", "source": "beta1"},
+    {"id": "beta1-gen2", "source": "beta1"},
+    {"id": "beta1-gen3", "source": "beta1"}
+  ]
+}

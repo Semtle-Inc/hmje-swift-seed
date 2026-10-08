@@ -1,0 +1,2 @@
+# Preserve the upstream patch verbatim, including blank context lines.
+reference/*.patch -whitespace

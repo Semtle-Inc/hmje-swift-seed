@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "checked_date": "2026-10-09",
+  "scope": "Source-prefix detection, standalone build environment forwarding, and HMIR wrapper contracts; complete Swift bootstrap not rerun. Build forwarding checks use fixture tools.",
+  "actual_reference": "Previously verified signature-normalized Beta 1 tools",
+  "check_count": 13,
+  "checks": [
+    {
+      "name": "actual-beta1-comparison-prefix-matches-previous-build",
+      "status": "passed"
+    },
+    {
+      "name": "alternate-prefix-and-spaces",
+      "status": "passed"
+    },
+    {
+      "name": "optimized-tool-without-location-records",
+      "status": "passed"
+    },
+    {
+      "name": "conflicting-prefix-rejected",
+      "status": "passed"
+    },
+    {
+      "name": "missing-prefix-rejected",
+      "status": "passed"
+    },
+    {
+      "name": "missing-comparison-tool-rejected",
+      "status": "passed"
+    },
+    {
+      "name": "standalone-default-uses-current-source-with-spaces",
+      "status": "passed"
+    },
+    {
+      "name": "explicit-prefix-survives-clean-build-environment",
+      "status": "passed"
+    },
+    {
+      "name": "relative-override-rejected",
+      "status": "passed"
+    },
+    {
+      "name": "newline-override-rejected",
+      "status": "passed"
+    },
+    {
+      "name": "wrapper-maps-only-source-metadata-before-backend",
+      "status": "passed"
+    },
+    {
+      "name": "equal-prefix-skips-mapping-and-runs-backend",
+      "status": "passed"
+    },
+    {
+      "name": "non-metadata-prefix-rejected-before-backend",
+      "status": "passed"
+    }
+  ],
+  "historical_full_run": "macos-arm64.json",
+  "current_seed_manifest_sha256": "a4bea1b6de6678ba74f05397e48510fd6fa0962754cdd0078403a424e88d0d53",
+  "driver_typecheck": "passed",
+  "shell_syntax": "passed"
+}
