@@ -2,7 +2,7 @@
 
 Swift 씨앗에서 시작하여 HMJE `1.0.0-beta.1` 빌드 `2026100804`의 컴파일러 도구를 재현하고, Beta 1 배포 패키지의 파일과 비교하기 위한 저장소입니다.
 
-macOS ARM64에서 경로 자동 감지 도입 전의 전체 자동 절차를 실행하여 네 도구의 고정점, 서명 전 배포 빌드 원본 및 서명을 정규화한 실제 배포 사본과의 일치를 확인했습니다. [실행 보고서](evidence/macos-arm64.json)와 [검증 현황](docs/verification-status.md)을 함께 제공합니다. 개인 경로 상수를 제거한 현재 실행 도구의 검사 결과는 [경로 이식성 검사](evidence/source-prefix-portability.json)에 기록합니다.
+macOS ARM64에서 49단계 부트스트랩과 네 도구의 고정점·배포 파일 비교를 완료했습니다. 실행 환경, 입력 버전 및 검증 코드별 적용 범위는 [재현 검증 결과](docs/verification-status.md)에서 확인할 수 있습니다.
 
 ## 검증 대상
 
@@ -21,7 +21,7 @@ macOS ARM64에서 경로 자동 감지 도입 전의 전체 자동 절차를 실
 - macOS 26 이상을 실행하는 Apple Silicon Mac (초기 부트스트랩 도구의 배포 타깃은 macOS 26.0)
 - Swift 및 macOS SDK를 포함한 Xcode (검증 환경: Swift 6.4, Apple Clang 21, macOS SDK 27.0)
 - Bash, `tar`, `shasum`, `cmp`, `codesign`
-- 현재 Beta 1 macOS ARM64 패키지에 포함된 네 도구 파일
+- [Beta 1 macOS ARM64 패키지](https://github.com/Semtle-Inc/hmje/releases/download/v1.0.0-beta.1/Hunmin-1.0.0-beta.1-2026100804-macos-arm64.dmg)에 포함된 네 도구 파일
 - 빌드 중간 파일을 보존할 충분한 디스크 공간
 
 Swift 패키지의 도구 버전 선언은 5.9입니다. 전체 재현 절차를 확인한 환경은 위의 Swift 6.4 환경이며, 다른 Xcode·SDK 조합에서 동일한 바이트가 생성된다는 의미는 아닙니다.
@@ -29,6 +29,13 @@ Swift 패키지의 도구 버전 선언은 5.9입니다. 전체 재현 절차를
 Python 및 외부 Swift 패키지를 사용하지 않습니다. 컴파일러 소스, 표준 라이브러리, 네이티브 런타임 및 빌드 드라이버는 `reference`에 소스 아카이브로 포함되어 있습니다. 아카이브에는 부트스트랩 실행 파일이나 이전 컴파일 결과가 들어 있지 않습니다.
 
 ## 실행
+
+```sh
+git clone https://github.com/Semtle-Inc/hmje-swift-seed.git
+cd hmje-swift-seed
+```
+
+비교 파일은 위 DMG에 포함된 툴체인에서 가져옵니다. 다운로드 파일의 해시는 릴리스의 [SHA256SUMS](https://github.com/Semtle-Inc/hmje/releases/download/v1.0.0-beta.1/SHA256SUMS)로 확인할 수 있습니다.
 
 저장소 루트에서 다음 명령을 실행합니다. 첫 번째 인자는 Beta 1 패키지의 네 도구가 들어 있는 폴더이며, 두 번째 인자는 아직 존재하지 않는 출력 폴더입니다.
 
@@ -49,11 +56,7 @@ swift scripts/verify-beta1.swift /path/to/beta1/libexec/bin .work/beta1-verifica
 
 Swift 씨앗 소스, 실행 스크립트, 고정된 중간·Beta 1 소스 아카이브, 부트스트랩 패치, 해시 목록, 문서 및 검증 보고서를 제공합니다. 배포 실행 파일, 로컬 로그, 압축 해제본, 빌드 중간 산출물과 인증서·프로비저닝 프로파일은 포함하지 않습니다. 실행 중 생성되는 파일은 Git에서 제외된 `.work/`에 보관합니다.
 
-배포용 소스 압축 파일은 Git에 등록된 파일로 생성합니다.
-
-```sh
-git archive --format=zip --output=../hmje-swift-seed.zip HEAD
-```
+소스는 이 저장소의 **Code → Download ZIP**으로 내려받거나 Git으로 복제할 수 있습니다.
 
 ## 판정 기준
 
@@ -67,7 +70,7 @@ git archive --format=zip --output=../hmje-swift-seed.zip HEAD
 
 Swift 씨앗은 현재 Beta 1에서 사용하는 일부 문법을 직접 처리하지 못합니다. 따라서 초기 소스를 Swift로 컴파일한 뒤, 고정된 중간 소스에서 필요한 컴파일 기능을 확보하고 최종 Beta 1 소스를 빌드합니다. 초기 버전의 재현 성공만으로 Beta 1 검증 성공을 판정하지 않습니다.
 
-정확한 소스 버전과 [부트스트랩 단계](docs/bootstrap.md)는 `reference/versions.json`, 아카이브·패치 해시는 `reference/SHA256SUMS`, 씨앗·검증 코드·버전 설정의 해시는 `reference/seed-beta1.sha256`에 기록합니다. 절차의 실행 결과는 [검증 현황](docs/verification-status.md)에 기록합니다.
+정확한 소스 버전과 [부트스트랩 단계](docs/bootstrap.md)는 `reference/versions.json`, 아카이브·패치 해시는 `reference/SHA256SUMS`, 씨앗·검증 코드·버전 설정의 해시는 `reference/seed-beta1.sha256`에 기록합니다. 절차의 실행 결과는 [재현 검증 결과](docs/verification-status.md)에 기록합니다.
 
 Beta 1 최종 빌드는 배포본과 같은 분할 컴파일·ThinLTO 방식을 사용합니다. 모든 출력과 캐시 폴더를 새로 만들고 이전 오브젝트를 재사용하지 않습니다. 소스 위치와 선택값 강제 추출 오류 메시지의 파일 경로에는 [배포 빌드의 고정 접두 경로](docs/bootstrap.md#소스-위치-경로)를 적용합니다. 이 변환은 신뢰 기반에 포함되며, 실행 명령이나 타입·심볼을 변경하지 않습니다.
 
@@ -83,4 +86,4 @@ Beta 1 최종 빌드는 배포본과 같은 분할 컴파일·ThinLTO 방식을 
 
 ## 라이선스
 
-컴파일러 및 Swift 이식 코드는 `LICENSE`의 HMJE 도구 소스 공개 라이선스를 따릅니다. 런타임과 라이브러리는 `LICENSE-RUNTIME`, 제삼자 자료는 `THIRD_PARTY_NOTICES.md` 및 각 원래 라이선스를 따릅니다. Beta 1 라이선스 버전 1.0(2026-10-09)을 적용하며, 공개 소스 저장소와 동일한 문안을 제공합니다.
+컴파일러 및 Swift 이식 코드는 `LICENSE`의 HMJE 도구 소스 공개 라이선스를 따릅니다. 런타임과 라이브러리는 `LICENSE-RUNTIME`, 제삼자 자료는 `THIRD_PARTY_NOTICES.md` 및 각 원래 라이선스를 따릅니다. Beta 1 라이선스 버전 1.0(2026-10-09)을 적용하며, [HMJE 소스 저장소](https://github.com/Semtle-Inc/hmje)의 라이선스와 동일합니다.
